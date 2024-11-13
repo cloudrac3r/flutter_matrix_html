@@ -34,6 +34,7 @@ class Html extends StatelessWidget {
     this.onImageTap,
     this.showImages = true,
     this.getMxcUrl,
+    this.mxcHeaders,
     this.maxLines,
     this.emoteSize,
     this.getCodeLanguage,
@@ -52,6 +53,7 @@ class Html extends StatelessWidget {
   final TextStyle linkStyle;
   final bool shrinkToFit;
   final GetMxcUrl getMxcUrl;
+  final Map<String, String> mxcHeaders;
   final int maxLines;
   final OnPillTap onPillTap;
   final GetPillInfo getPillInfo;
@@ -100,6 +102,7 @@ class Html extends StatelessWidget {
                 onImageTap: onImageTap,
                 showImages: showImages,
                 getMxcUrl: getMxcUrl,
+                mxcHeaders: mxcHeaders,
                 maxLines: maxLines,
                 emoteSize: emoteSize,
                 defaultTextStyle: defaultTextStyle,

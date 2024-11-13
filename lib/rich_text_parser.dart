@@ -397,6 +397,7 @@ class HtmlRichTextParser extends StatelessWidget {
     this.onImageTap,
     this.showImages = true,
     this.getMxcUrl,
+    this.mxcHeaders,
     this.maxLines,
     this.defaultTextStyle,
     this.emoteSize,
@@ -421,6 +422,7 @@ class HtmlRichTextParser extends StatelessWidget {
   final OnImageTap onImageTap;
   final bool showImages;
   final GetMxcUrl getMxcUrl;
+  final Map<String, String> mxcHeaders;
   final int maxLines;
   final TextStyle defaultTextStyle;
   final double emoteSize;
@@ -997,6 +999,7 @@ class HtmlRichTextParser extends StatelessWidget {
                     child: Image(
                       image: CachedNetworkImageProvider(
                         url,
+                        headers: mxcHeaders,
                         scale: imageProperties?.scale ?? 1.0,
                       ),
                       frameBuilder: (context, child, frame, _) {
